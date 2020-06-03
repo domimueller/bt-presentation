@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="Bachelor Thesis Presentation">
+		<meta name="author" content="Dominique Müller">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+
+	<body>
+
+        
+        
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
+                
+					<img src="images/1result.jpg" alt="Resultat der Bachelor Thesis" style="height: 250px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+                    
+					<h3>Automatische Analyse von Kamerabildern zur Prognose des Geburtszeitpunkts von Kälbern</h3>
+					<p>
+                        Dominique Müller
+                    </p>    
+                    <p>
+                        <small>Präsentation Bachelor Thesis</small>
+					</p>
+				</section>
+
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                    <h2>Inhalt</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+                        <aside class="notes">
+                            Die Geburt ist ein kritisches Ereignis für Kuh und Kalb und oftmals Auslöser für nachfolgende Krankheiten.
+                            Schwere Geburten haben wirtschaftliche Konsequenzen in Form von Kosten für die Dienstleistungen des Tierarztes, nicht verkauften Kälbern, tieferer Milchproduktion oder vorzeitiger Schlachtung. Darüber hinaus ist Dystokie schmerzvoll und beeinträchtigt das Wohlergehen der Kühe.
+                        </aside>
+                        
+						<h2>Ausgangslage und Motivation</h2>
+						<p>"Schwere" Geburten: wirtschaftliche Konsequenzen und Beinträchtigung des Wohlergehens der Tiere</p>
+                        <p> Case-Arbeit als Basis für Bachelor-Arbeit </p>
+						
+						<a href="#" class="navigate-down">
+							<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+                        <aside class="notes">
+                            Optimales Management und Überwachung der Geburt wirken diesen Risiken entgegen und vermindern die Eintrittswahrscheinlichkeit von Dystokie und Totgeburt. Genau hier setzt das Projekt an: Die Prognose des Geburtszeitpunkts unterstützt die Entscheidung, ob und wann menschliche Geburtshilfe angebracht ist. Die Unterstützung beim Abkalben bewirkt eine Verringerung der Kälbersterblichkeit. Die Vorhersage des Geburtszeitpunkts ist daher sowohl für die Wirtschaftlichkeit der Tierhaltung als auch für das Wohlergehen der Tiere von Bedeutung.
+                            Case-Arbeit „Technologische Unterstützung von Landwirten bei der Geburt von Kälbern und bei der Heuernte“ dient als Basis. Es wurde ein System entwickelt, welches in regelmässigen zeitlichen Abständen Kamerabilder aufnimmt und auf einer Website darstellt. Diese Bilder werden für die Bachelor-Arbeit verwendet.
+                        </aside>
+                        
+                        
+						<h2>Optimales Management</h2>
+                        
+                        <br>
+							<img src="images/2zughilfe.jpg" alt="Zughilfe, unterstützt durch optimale Überwachung" style="height: 350px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</section>
+					<section>
+                        
+                        <aside class="notes">
+						<li>Neigungs- und Beschleunigungssensoren für Erkennung von Schwanzhebung und Verhaltensänderungen</li>
+						<li>Wiederkäuersensoren für die Messung des Wiederkäuerverhaltens</li>
+						<li>Intelligente Bauchgürtel für die Erkennung von Adbominalkontraktionen</li>
+						<li>Intravaginale Sensoren erkennen einen Abfall der Körpertemperatur</li>
+                        <li>Vorrichtungen für die Erkennung der Ausstossung der Waden</li>
+                        </aside>                        
+						<h2>Bereits entwickelte Produkte</h2>
+					<ul>
+						<li>Neigungs- und Beschleunigungssensoren für Erkennung von Schwanzhebung und Verhaltensänderungen</li>
+						<li>Wiederkäuersensoren</li>
+						<li>Intelligente Bauchgürtel</li>
+						<li>Intravaginale Sensoren</li>
+                        <li>Kritik: Geringe Anzahl Parameter, oftmals Fokus auf Rasse Holstein, technische Vorrichtungen an Kuh sind leicht zerstörbar  </li>
+					</ul>						
+
+					</section>
+					<section>
+                        <aside class="notes">
+                            <ul>
+                                <li>Aufwand für die Überwachung des Geburtsverlaufs reduzieren</li>
+                                <li>Entscheidungsunterstützung und Vereinfachung der Einleitung von Massnahmen zur Geburtshilfe.</li>
+                                <li>Geburtsrisiken senken</li>
+                                <li>System entwickeln, welches die automatische Analyse von Kamerabildern zur Prognose des Geburtszeitpunkts von Kälbern ermöglicht</li>
+                                <li>Das System arbeitet auf Basis von geometrischen Mustern und visuellen Merkmalen.</li>
+                                <li>Das System arbeitet aus sicherer Entfernung zu den Tieren, sodass es nicht invasiv ist.</li>
+                                <li>Gezielter Benachrichtigungen über den Geburtsverlauf fast in Echtzeit</li>
+                                <li>Intravaginale Sensoren</li>
+                                <li>Kritik: Geringe Anzahl Parameter, oftmals Fokus auf Rasse Holstein, technische Vorrichtungen an Kuh sind leicht zerstörbar  </li>
+                            </ul>                            
+                        </aside>                               
+						<h2>Ziele</h2>
+                        
+					<ul>
+						<li>Aufwand für die Überwachung des Geburtsverlaufs reduzieren</li>
+                        <li>Automatische Analyse von Kamerabildern</li>
+                        <li>Arbeit Basis von geometrischen Mustern und visuellen Merkmalen.</li>
+                        <li>Sichere Entfernung zu den Tieren</li>
+					</ul>						
+
+					</section>                    
+				</section>
+
+				<section>
+                    <aside class="notes">
+					<ul>
+						<li>Im Rahmen einer Domänenanalyse werden zur Gewinnung von Expertenwissen die wesentlichen Merkmale eines Bildes identifiziert, welche für Prognose und computergetriebene Analyse des Geburtsverlaufs von Kälbern von Bedeutung sind.</li>
+                        <li>Die Lieferobjekte sind durch die Vorgaben des Domain-Driven Designs (DDD) bestimmt2</li>
+                        <li>Der Kern des modellierten Systems wird in der Programmiersprache Python mithilfe der Software-Library OpenCV zur Bildverarbeitung implementiert. Das Ergebnis ist ein flexibles und konfigurierbares System, welches die automatische Analyse von Kamerabildern bei der Geburt von Kälbern ermöglicht. Dabei wird der Fokus auf die Erkennung der Seitenlage gesetzt. Die Software ist modellgetrieben entwickelt und die erstellten Modelle, welche in UML-Notation erfasst sind, dienen als Dokumentation der Lösung.</li>
+                        <li>Für Entwurf und Implementierung des Systems sind bewährte Methoden des Software Engineerings anzuwenden. Dabei soll Information Hiding, Kapselung  und Wiederverwendung von technischen Implementierungen berücksichtigt werden. Die Software ist modellgetrieben zu entwickeln und die erstellten Modelle, welche in UML-Notation erfasst sind, dienen als Dokumentation der Lösung.</li>
+					</ul>
+                    </aside>
+					<h2>Methodisches Vorgehen</h2>
+                    <ul>
+                        <li>Domänenanalyse zur Gewinnung von Expertenwissen</li>
+                        <li>Domain Driven Design</li>
+                        <li>Bewährte Methoden des Software Engineerings</li>
+                    </ul>
+				</section>
+
+                
+				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
+                    <aside class="notes">
+                        In der Tabelle wird Domänenwissen von Prof. Dr. med. vet. Samuel Kohler und Dr. med. vet. Gaby Hirsbrunner codiert. Dieses wurde bei Interviews per Videotelefonie erhoben. Beide befragte Personen haben die An- und Abwesenheit von Merkmalen in Bezug auf die Stärke des Hinweises auf eine bevorstehende Geburt bewertet. Die Tabelle besteht nebst der Aufzählung von Merkmalen aus den drei Spaltengruppen „Anwesenheit“, „Abwesenheit“ und „Mittelwert“. Die Gruppen „Anwesenheit“ und „Abwesenheit“ repräsentieren dabei die Rohdaten, welche auf der Durchführung von Interviews basieren. Die Spalten der Gruppe „Mittelwert“ entsprechen jeweils dem gewichteten Mittelwert der Rohdaten aus den vorgelagerten Spaltengruppen.
+                        Für die gesammelten Daten zur An- und Abwesenheit von Merkmalen sind je vier Spalten vorhanden. Eine Spalte repräsentiert jeweils die Bewertungen der Tierärzte und eine weitere Spalte entspricht der Gewichtung dieser Bewertung. In Klammer sind die Initialen des Interviewten angegeben, also SK für Prof. Dr. med. vet. Samuel Kohler und GH für Dr. med. vet. Gaby Hirsbrunner.
+                        
+                        Während der Durchführung der Interviews hatten die ExpertInnen die Möglichkeit, weitere Geburtsmerkmale hinzuzufügen und zu bewerten. Deshalb haben nicht beide Veterinäre sämtliche Merkmale bewertet. Falls einer davon die Anwesenheit oder Abwesenheit eines Merkmals nicht bewertet hat, ist dies mit Bewertung = 99 codiert. Diese Bewertung wird dementsprechend nicht gewichtet, also Gewichtung = 0. 
+                        
+                        Der gewichtete Mittelwert der Bewertung von An- und Abwesenheit dieser Merkmale dient als integraler Bestandteil des zu entwickelnden Systems. Dieses muss das gewonnene Domänenwissen einsetzen, um Kamerabilder mit Abkalbung von Kamerabildern ohne Abkalbung zu unterscheiden.
+                    </aside>
+					<h2>Domänenanalyse</h2>
+                        <br>
+                        <img src="images/3analysis.jpg" alt="Zentrale Resultate der Domänenanalyse" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">                    
+				</section>
+                
+				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
+                    <aside class="notes">
+                        UNBEDINGT DARSTELLUNG MIT ZOOM FUNKTION ALT+KLICK WÄHREND PRÄSENTATION
+                    </aside>
+                    <h3>Lösung</h3>
+
+                    <img src="images/4solution.jpg" alt="Lösung des Pakets ImageAnalysis" style="height:550px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+                    
+				</section>                
+                <!--
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                   <aside class="notes">
+                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                    </aside>
+                    <div class="container">
+                        <div class="left">
+                            left
+                        </div>
+                        
+                        <div class="right">
+                            right
+                        </div>
+                    </div>
+                </section>
+                -->
+
+
+
+
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<h2>Auto-Animate</h2>
+					<p>Automatically animate matching elements across slides with <a href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
+					<div class="r-hstack justify-center">
+						<div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+						<div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+						<div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+					</div>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
+						<div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
+						<div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
+					</div>
+					<h2 style="margin-top: 20px;">Auto-Animate</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-stack">
+						<div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"></div>
+						<div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"></div>
+						<div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div>
+					</div>
+					<h2 style="margin-top: 20px;">Auto-Animate</h2>
+				</section>
+
+
+
+
+
+
+				<section>
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an example:</p>
+					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the page background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>State Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.on( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+					</p>
+				</section>
+
+				<section>
+					<h2>Much more</h2>
+					<ul>
+						<li>Right-to-left support</li>
+						<li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
+						<li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
+						<li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
+						<li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- <a href="https://slides.com">Try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
