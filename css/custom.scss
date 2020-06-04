@@ -10,9 +10,38 @@
 /*********************************************
  * GENERAL
  *********************************************/
-tt {font-family: monospace; font-size: 18px;}
-small tt, .center small li {font-size: 16px !important;}
+
+/* Titles */
+h3.firstTitle {font-size: 1.1em}
+h2.containsTT tt, .reveal h2.containsTT {font-size: 1em !important;  } 
 section h2.unimporantTitle {font-size: 1.2em !important ; }
+
+
+/* Lists *
+
+li.smallList {font-size: 0.5em !important;}
+li.smallList tt {font-size: 1em;}
+
+
+/* links, controls */
+.reveal section a {color:white;}
+.reveal .controls {color: white;}
+.reveal .progress {color: white;}
+
+/* further styling*/
+p.small {font-size: 0.8em}
+tt {font-family: monospace; font-size: 0.5em; text-transform: none;  }
+
+
+ {text-transform: none; font-size: 1em; } 
+/*********************************************
+ * Start Page
+ *********************************************/
+
+.startpage.small {display: inline-block;}
+span.customCicrle  {  width: 10px; height: 10px;  border-radius: 50%; background: white; display: inline-block;  vertical-align: middle;}
+div.divider {position: relative; display: inline-block;     line-height: 1.2em; height: 1.2em; width: 1.2em;} 
+
 
 /*********************************************
  * Allow Multiple Columns in a Slide
@@ -45,4 +74,44 @@ section h2.unimporantTitle {font-size: 1.2em !important ; }
 .fa-container.rightArrowContainer i { 
     width: 150px;
     font-size: 100px;
+}
+
+.ending i {font-size: 180px;}
+
+.scrollArrow i {font-size: 100px}
+
+
+/*********************************************
+ *  Hover a Elements: Deactivate blue link 
+    color and perform shake animation
+ *********************************************/
+
+
+a:hover i, a:visited i, , a:active i  {
+    color: white;
+}
+
+
+
+a:hover i {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

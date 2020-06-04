@@ -39,22 +39,28 @@
                 
 					<img src="images/1result.jpg" alt="Resultat der Bachelor Thesis" style="height: 250px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
                     
-					<h3>Automatische Analyse von Kamerabildern zur Prognose des Geburtszeitpunkts von Kälbern</h3>
-					<p>
-                        Dominique Müller
-                    </p>    
-                    <p>
-                        <small>Präsentation Bachelor Thesis</small>
-					</p>
+					<h3 class="firstTitle">Automatische Analyse von Kamerabildern zur Prognose des Geburtszeitpunkts von Kälbern</h3>
+
+                    <p class="startpage small">Präsentation Bachelor Thesis</p> 
+                    <div class="divider">
+                        <span class="customCicrle"></span>
+                    </div>
+                    <p class="startpage small">Dominique Müller</p>
+
 				</section>
 
                 <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                     <h2>Inhalt</h2>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>Ausgangslage und Motivation</li>
+						<li>Methodisches Vorgehen</li>
+						<li>Domänenanalyse</li>
+						<li>Lösung</li>
+						<li>Umsetzung</li>                        
+						<li>Resultate</li>
+						<li>Ausblick</li>
+
+                        
 					</ul>
 				</section>
 
@@ -67,17 +73,17 @@
                         </aside>
                         
 						<h2>Ausgangslage und Motivation</h2>
-						<p>"Schwere" Geburten: wirtschaftliche Konsequenzen und Beinträchtigung des Wohlergehens der Tiere</p>
-                        <p> Case-Arbeit als Basis für Bachelor-Arbeit </p>
-						
-						<a href="#" class="navigate-down">
-							<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
-						</a>
+						<br>
+                        <p>"Schwere" Geburten: wirtschaftliche Konsequenzen und Beinträchtigung des Wohlergehens der Tiere</p>
+                        <br>
+                        <a href="#" class="navigate-down">
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
 					</section>
 					<section>
                         <aside class="notes">
-                            Optimales Management und Überwachung der Geburt wirken diesen Risiken entgegen und vermindern die Eintrittswahrscheinlichkeit von Dystokie und Totgeburt. Genau hier setzt das Projekt an: Die Prognose des Geburtszeitpunkts unterstützt die Entscheidung, ob und wann menschliche Geburtshilfe angebracht ist. Die Unterstützung beim Abkalben bewirkt eine Verringerung der Kälbersterblichkeit. Die Vorhersage des Geburtszeitpunkts ist daher sowohl für die Wirtschaftlichkeit der Tierhaltung als auch für das Wohlergehen der Tiere von Bedeutung.
-                            Case-Arbeit „Technologische Unterstützung von Landwirten bei der Geburt von Kälbern und bei der Heuernte“ dient als Basis. Es wurde ein System entwickelt, welches in regelmässigen zeitlichen Abständen Kamerabilder aufnimmt und auf einer Website darstellt. Diese Bilder werden für die Bachelor-Arbeit verwendet.
+                            Optimales Management und Überwachung der Geburt wirken diesen Risiken entgegen und vermindern die Eintrittswahrscheinlichkeit von Dystokie und Totgeburt. Genau hier setzt das Projekt an: Die Prognose des Geburtszeitpunkts unterstützt die Entscheidung, ob und wann menschliche Geburtshilfe angebracht ist (Unterstützung zB wie im Bild sichtbar). Die Unterstützung beim Abkalben bewirkt eine Verringerung der Kälbersterblichkeit. Die Vorhersage des Geburtszeitpunkts ist daher sowohl für die Wirtschaftlichkeit der Tierhaltung als auch für das Wohlergehen der Tiere von Bedeutung.
+                            Die Case-Arbeit „Technologische Unterstützung von Landwirten bei der Geburt von Kälbern und bei der Heuernte“ dient als Basis für die BT. Es wurde ein System entwickelt, welches in regelmässigen zeitlichen Abständen Kamerabilder aufnimmt und auf einer Website darstellt. Diese Bilder werden für die Bachelor-Arbeit verwendet.
                         </aside>
                         
                         
@@ -97,12 +103,13 @@
                         </aside>                        
 						<h2>Bereits entwickelte Produkte</h2>
 					<ul>
-						<li>Neigungs- und Beschleunigungssensoren für Erkennung von Schwanzhebung und Verhaltensänderungen</li>
+						<li>Neigungs- und Beschleunigungssensoren</li>
 						<li>Wiederkäuersensoren</li>
 						<li>Intelligente Bauchgürtel</li>
 						<li>Intravaginale Sensoren</li>
-                        <li>Kritik: Geringe Anzahl Parameter, oftmals Fokus auf Rasse Holstein, technische Vorrichtungen an Kuh sind leicht zerstörbar  </li>
-					</ul>						
+					</ul>	
+                    <p><em>Kritik:</em> Geringe Anzahl Parameter, oftmals Fokus auf Rasse Holstein, invasive Systeme</p>
+                        
 
 					</section>
 					<section>
@@ -134,8 +141,8 @@
 				<section>
                     <aside class="notes">
 					<ul>
-						<li>Im Rahmen einer Domänenanalyse werden zur Gewinnung von Expertenwissen die wesentlichen Merkmale eines Bildes identifiziert, welche für Prognose und computergetriebene Analyse des Geburtsverlaufs von Kälbern von Bedeutung sind.</li>
-                        <li>Die Lieferobjekte sind durch die Vorgaben des Domain-Driven Designs (DDD) bestimmt2</li>
+						<li>Im Rahmen einer Domänenanalyse werden zur Gewinnung von Expertenwissen (Literaturrecherche + Interviews + Modellierung) die wesentlichen Merkmale eines Bildes identifiziert, welche für Prognose und computergetriebene Analyse des Geburtsverlaufs von Kälbern von Bedeutung sind. </li>
+                        <li>Die Lieferobjekte sind durch die Vorgaben des Domain-Driven Designs (DDD) bestimmt</li>
                         <li>Der Kern des modellierten Systems wird in der Programmiersprache Python mithilfe der Software-Library OpenCV zur Bildverarbeitung implementiert. Das Ergebnis ist ein flexibles und konfigurierbares System, welches die automatische Analyse von Kamerabildern bei der Geburt von Kälbern ermöglicht. Dabei wird der Fokus auf die Erkennung der Seitenlage gesetzt. Die Software ist modellgetrieben entwickelt und die erstellten Modelle, welche in UML-Notation erfasst sind, dienen als Dokumentation der Lösung.</li>
                         <li>Für Entwurf und Implementierung des Systems sind bewährte Methoden des Software Engineerings anzuwenden. Dabei soll Information Hiding, Kapselung  und Wiederverwendung von technischen Implementierungen berücksichtigt werden. Die Software ist modellgetrieben zu entwickeln und die erstellten Modelle, welche in UML-Notation erfasst sind, dienen als Dokumentation der Lösung.</li>
 					</ul>
@@ -151,8 +158,10 @@
                 
 				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
                     <aside class="notes">
+                        Zusätzlich wird die Programmiersprache R für die Auswertung der Interviews genutzt. Vorteil: Enge Verzahnung mit Latex.
+                        
                         In der Tabelle wird Domänenwissen von Prof. Dr. med. vet. Samuel Kohler und Dr. med. vet. Gaby Hirsbrunner codiert. Dieses wurde bei Interviews per Videotelefonie erhoben. Beide befragte Personen haben die An- und Abwesenheit von Merkmalen in Bezug auf die Stärke des Hinweises auf eine bevorstehende Geburt bewertet. Die Tabelle besteht nebst der Aufzählung von Merkmalen aus den drei Spaltengruppen „Anwesenheit“, „Abwesenheit“ und „Mittelwert“. Die Gruppen „Anwesenheit“ und „Abwesenheit“ repräsentieren dabei die Rohdaten, welche auf der Durchführung von Interviews basieren. Die Spalten der Gruppe „Mittelwert“ entsprechen jeweils dem gewichteten Mittelwert der Rohdaten aus den vorgelagerten Spaltengruppen.
-                        Für die gesammelten Daten zur An- und Abwesenheit von Merkmalen sind je vier Spalten vorhanden. Eine Spalte repräsentiert jeweils die Bewertungen der Tierärzte und eine weitere Spalte entspricht der Gewichtung dieser Bewertung. In Klammer sind die Initialen des Interviewten angegeben, also SK für Prof. Dr. med. vet. Samuel Kohler und GH für Dr. med. vet. Gaby Hirsbrunner.
+                        Für die gesammelten Daten zur An- und Abwesenheit von Merkmalen sind je vier Spalten vorhanden. Eine Spalte repräsentiert jeweils die Bewertungen der Tierärzte und eine weitere Spalte entspricht der Gewichtung dieser Bewertung. 
                         
                         Während der Durchführung der Interviews hatten die ExpertInnen die Möglichkeit, weitere Geburtsmerkmale hinzuzufügen und zu bewerten. Deshalb haben nicht beide Veterinäre sämtliche Merkmale bewertet. Falls einer davon die Anwesenheit oder Abwesenheit eines Merkmals nicht bewertet hat, ist dies mit Bewertung = 99 codiert. Diese Bewertung wird dementsprechend nicht gewichtet, also Gewichtung = 0. 
                         
@@ -164,8 +173,17 @@
 				</section>
                 
 				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
-                    <aside class="notes">
-                        UNBEDINGT DARSTELLUNG MIT ZOOM FUNKTION ALT+KLICK WÄHREND PRÄSENTATION
+                    <aside class="notes"> 
+                        UNBEDINGT DARSTELLUNG MIT ZOOM FUNKTION ALT+KLICK <br> <br>
+                        
+                        Ich gehe auf eine Auswahl von Klassen ein, welche fachlich interessant sind.  <br> <br>
+                        Die Klasse "ImageProcessor" verarbeitet Bilder unter Verwendung der OpenCV Bibliothek. Dabei werden Bilder oft als Matrizen behandelt, zb durch die Multiplikation mit einem Skalar aufgehellt. Weiter kann der ImageProcessor Schwellwertverfahren mittels der Funktion threshold() oder adaptiveThreshold() durchführen oder das Histogramm eines Bildesmittels clahe() glätten. <br> <br>
+                        
+                        Die Klasse "ContourFinder" nimmt eine Konfiguration entgegen und sucht abhängig von der Konfiguration Kontouren in einem Bild. Dabei wird die Funktion findContours() verwendet.   <br> <br>   
+                        
+                        Die Klasse "ContourDrawer" zeichnet ausgehend von einer Konfiguration die Konturen in ein Bild ein, welche com ConntourFinder gefunden wurden. <br> <br>
+                        
+                        Die Klasse "TraitRecognitor" filtert die gefunden Konturen und hat zum Ziel, zu erkkenen, ob  sich die Kuh in Seitenlage befindet oder nicht. Mehr dazu später, da es besonders interessant ist und ein spezifisches Vorgehen angwewendet wurde.<br> <br>
                     </aside>
                     <h3>Lösung</h3>
 
@@ -178,7 +196,7 @@
                         <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
                     </aside>
                     
-                    <h2>Umsetzung: Überblick</h2>
+                    <h2 class="containsTT"><tt>TraitRecognitor</tt>: Überblick</h2>
 
                     <div class="container">
                         
@@ -214,7 +232,7 @@
                         <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
                     </aside>
                     
-                    <h2>Umsetzung: Binärbild</h2>
+                    <h2>TraitRecognitor: Binärbild</h2>
 
                     <div class="container">
                         
@@ -248,7 +266,7 @@
                         <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
                     </aside>
                
-                    <h2 class="unimporantTitle">Umsetzung: Unwichtige Bereiche</h2>
+                    <h2 class="unimporantTitle">"TraitRecognitor": Unwichtige Bereiche</h2>
                     
 
                     <div class="container">
@@ -282,12 +300,12 @@
                     </div>
                 </section>                 
 
-                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                <section class="implementationContainer" data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
 
                     <aside class="notes">
                         <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
                     </aside>                
-                    <h2>Umsetzung: Winkel</h2>
+                    <h2>"TraitRecognitor": Winkel</h2>
 
                     <div class="container">
  
@@ -303,9 +321,9 @@
                                 <i class="fas fa-arrow-right"></i>
                             </div>
                             <ol>
-                                <small><li>Winkel der Lampe im Originalbild messen</li></small>
-                                <small><li>Winkel bereinigen</li></small> 
-                                <small><li>bereinigter Winkel im Wertebereich <tt>[70&deg;; 110&deg;]</tt></li></small>
+                                <li class="smallList">Winkel der Lampe messen</li>
+                                <li class="smallList">Winkel bereinigen</li>
+                                <li class="smallList">Winkel im Wertebereich <tt>[70&deg;; 110&deg;]</tt></li>
                                 
                                 
                             </ol>
@@ -328,7 +346,7 @@
                    <aside class="notes">
                         <p>Extent= Fläche der Kontur/ Fläche umschliessendes Rechteck</p>
                     </aside>
-                    <h2>Umsetzung: Extent</h2>
+                    <h2>"TraitRecognitor": Extent</h2>
                     <div class="container">
  
                         
@@ -363,7 +381,7 @@
                    <aside class="notes">
                         <p>Aspect Ratio= Lange Seite/ kurze Seite</p>
                     </aside>
-                    <h2>Umsetzung: Aspect Ratio</h2>
+                    <h2>"TraitRecognitor": Aspect Ratio</h2>
                     <div class="container">
  
                         <div class="col thirdSize left">
@@ -421,31 +439,7 @@
                         </div>
                         
                 </section> 
-                    
-                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
-                    <aside class="notes">
-					<ul>
-                        <li>Falsches Resultat</li>
-                        <li>Durch Konfiguration verbessertes Resultat</li>
-                        <li>Korrektes Resultat</li>
-                        <li>Korrektes Resultat</li>
-                        
-					</ul>
-                    </aside>
-                    <h2>Resultate</h2>
                    
-                        	
-                        <div class="r-stack">
-
-                            <div class="fragment">test</div>
-                            <div class="fragment">test2</div>
-                            <div class="fragment">test3</div>
-                            
-
-        
-                        </div>
-                        
-                </section>                      
                     
                 <section  data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <aside class="notes">
@@ -478,9 +472,10 @@
 
 
 
-				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
+				<section class="ending" data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
 					<h1>Fragen? </h1>
-					
+                    <br>
+					<i class="far fa-comments"></i>
                     <br><br>
                     <p>Vielen Dank für Ihre Aufmerksamkeit!</p>
 				</section>
