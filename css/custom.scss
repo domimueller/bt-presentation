@@ -1,6 +1,48 @@
 /**
- * Layout helpers.
+ *
+ *
+ * CUSTOM STYLES FOR BACHELOR THESIS PRESENTATION
+ * *
  */
 
-// Stretch an element vertically based on available space
-.custom-container { justify-content: flex-end; background: red; }
+@import 'layout';
+
+/*********************************************
+ * GENERAL
+ *********************************************/
+tt {font-family: monospace; font-size: 18px;}
+small tt, .center small li {font-size: 16px !important;}
+section h2.unimporantTitle {font-size: 1.2em !important ; }
+
+/*********************************************
+ * Allow Multiple Columns in a Slide
+ *********************************************/
+
+.container {position: relative;}
+.col {position: relative;  display: inline-block; }
+.left{ float: left;}
+.right{ float: right;}
+
+.container .col.halfSize {width: 50%;}
+.container .col.thirdSize {width: 33% }
+.container .col.quarterSize {width: 25%;}
+.container .col.twentyPercentSize {width: 20%} 
+.container .col.fourtyPercentSize {width: 40%} 
+
+
+
+
+/*********************************************
+ * Font Aweseome Symbols
+ *********************************************/
+
+.fa-container i { 
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+.fa-container.rightArrowContainer i { 
+    width: 150px;
+    font-size: 100px;
+}

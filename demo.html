@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Geburtsprognose Präsentation</title>
 
 		<meta name="description" content="Bachelor Thesis Presentation">
 		<meta name="author" content="Dominique Müller">
@@ -17,9 +17,14 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		
+        <!-- Styles used to include Bachelor Thesis Presentation -->
+        <link rel="stylesheet" href="dist/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+
 	</head>
 
 	<body>
@@ -167,118 +172,317 @@
                     <img src="images/4solution.jpg" alt="Lösung des Pakets ImageAnalysis" style="height:550px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
                     
 				</section>                
-                <!--
+                
                 <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
                         <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
                     </aside>
+                    
+                    <h2>Umsetzung: Überblick</h2>
+
                     <div class="container">
-                        <div class="left">
-                            left
+                        
+                        
+                        <div class="col fourtyPercentSize left">
+                            <img src="images/dev/1start.jpg" alt="Originalbild" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                            <p>Originalbild</p>
+
                         </div>
                         
-                        <div class="right">
-                            right
+                        
+                        <div class="col twentyPercentSize center">
+                            <div class="fa-container rightArrowContainer">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
+                        
+                        
+                        <div class="col fourtyPercentSize right">
+                            <img src="images/dev/2resultat.jpg" alt="Resultat Bachelor Thesis" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                        <p>Resultat</p>
+
+
+                        </div>
+                        
                     </div>
                 </section>
-                -->
+                
 
+                
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                   <aside class="notes">
+                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                    </aside>
+                    
+                    <h2>Umsetzung: Binärbild</h2>
 
+                    <div class="container">
+                        
+                        
+                        <div class="col fourtyPercentSize left">
+                            <img src="images/dev/1start.jpg" alt="Originalbild" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                            <p>Originalbild</p>
+ 
+                        </div>
+                        
+                        <div class="col twentyPercentSize center">
+                            <div class=" fa-container rightArrowContainer">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>                            <ol>
+                                <tt><li>inRange() </li></tt> 
+                                <tt><li>bitwise_or()</li></tt>
+                            </ol>
+                        </div>  
+                        
+                        <div class="col fourtyPercentSize right">
+                            <img src="images/dev/5binLampeUndHolz.jpg" alt="Resultat Bachelor Thesis" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> 
+                            <p>Lampe und Holz weiss</p>
+                        </div>                           
+                        
+                    </div>
+                </section> 
+                
+                
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                   <aside class="notes">
+                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                    </aside>
+               
+                    <h2 class="unimporantTitle">Umsetzung: Unwichtige Bereiche</h2>
+                    
 
+                    <div class="container">
+                        
+                        
+                        <div class="col thirdSize left">
+                            <img src="images/dev/5binLampeUndHolz.jpg" alt="Lampe und Holz weiss" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                            <p>Lampe und Holz weiss</p>
+ 
+                        </div>
+                        
+                        <div class="col thirdSize center">
+                            <div class="fa-container rightArrowContainer">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <ol>
+                                <tt><li>findContours() </li></tt> 
+                                <tt><li>drawContours()</li></tt>
+                                <tt><li>boundingRect()</li></tt>
+                                <tt><li>minEnclosingCircle()</li></tt>
+                                
+                                
+                            </ol>
+                        </div>  
+                        
+                        <div class="col thirdSize right">
+                            <img src="images/dev/14ContoursAfterThresholding.jpg" alt="Resultat des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> 
+                            <p>Unwichtige Bereiche</p>
+                        </div>                           
+                        
+                    </div>
+                </section>                 
 
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<h2>Auto-Animate</h2>
-					<p>Automatically animate matching elements across slides with <a href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
-					<div class="r-hstack justify-center">
-						<div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-						<div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-						<div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-					</div>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div class="r-hstack justify-center">
-						<div data-id="box1" data-auto-animate-delay="0" style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
-						<div data-id="box2" data-auto-animate-delay="0.1" style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
-						<div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
-					</div>
-					<h2 style="margin-top: 20px;">Auto-Animate</h2>
-				</section>
-				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-					<div class="r-stack">
-						<div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"></div>
-						<div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"></div>
-						<div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div>
-					</div>
-					<h2 style="margin-top: 20px;">Auto-Animate</h2>
-				</section>
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
 
+                    <aside class="notes">
+                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                    </aside>                
+                    <h2>Umsetzung: Winkel</h2>
 
+                    <div class="container">
+ 
+                        
+                        <div class="col thirdSize left">
+                            <img src="images/dev/14ContoursAfterThresholding.jpg" alt="Resultat des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> 
+                            <p>Unwichtige Bereiche</p>
+                        </div>                        
+                        
+ 
+                        <div class="col thirdSize center">
+                            <div class="fa-container rightArrowContainer">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <ol>
+                                <small><li>Winkel der Lampe im Originalbild messen</li></small>
+                                <small><li>Winkel bereinigen</li></small> 
+                                <small><li>bereinigter Winkel im Wertebereich <tt>[70&deg;; 110&deg;]</tt></li></small>
+                                
+                                
+                            </ol>
+                        </div> 
+                        
+                        <div class="col thirdSize right">
+                            <img src="images/dev/22AngleCorrectur.jpg" alt="Resultat des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                            <p>nach Winkel gefiltertert</p>
+ 
+                        </div>
+                        
+                    </div>
+                </section>
+                
+                
 
+                
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+  
+                   <aside class="notes">
+                        <p>Extent= Fläche der Kontur/ Fläche umschliessendes Rechteck</p>
+                    </aside>
+                    <h2>Umsetzung: Extent</h2>
+                    <div class="container">
+ 
+                        
+                        <div class="col fourtyPercentSize left">
+                            <img src="images/dev/22AngleCorrectur.jpg" alt="Ausgangslage des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> 
+                            <p>nach Winkel gefiltertert</p>
+                        </div>                        
+                        
+ 
+                        <div class="col twentyPercentSize center">
+                            <div class="fa-container rightArrowContainer">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            
+                                <tt> Extent < 0.5 </tt> 
+                                
+                            
+                        </div> 
+                        
+                        <div class="col fourtyPercentSize right">
+                            <img src="images/dev/24FilteringExtentAngle.jpg" alt="Resultat des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                            <p>Nach Winkel und Extent gefiltert</p>
+ 
+                        </div>
+                        
+                    </div>
+                </section>       
+                                
+                
+                
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                   <aside class="notes">
+                        <p>Aspect Ratio= Lange Seite/ kurze Seite</p>
+                    </aside>
+                    <h2>Umsetzung: Aspect Ratio</h2>
+                    <div class="container">
+ 
+                        <div class="col thirdSize left">
+                            <img src="images/dev/24FilteringExtentAngle.jpg" alt="Ausgangslage des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                            <p>Nach Winkel und Extent gefiltert</p>
+ 
+                        </div>                      
+                        
+ 
+                        <div class="col thirdSize center">
+                            <div class="fa-container rightArrowContainer">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <ol>
+                                <tt>AspectRatio > 1.5</tt> 
+                                
+                                
+                            </ol>
+                        </div> 
+                        
+                        <div class="col thirdSize right">
+                            <img src="images/dev/30FilteredByExtentAspectAngle.jpg" alt="Resultat des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+                            <p>Nach Winkel, Extent und Aspect Ratio gefiltert</p>
+ 
+                        </div>
+                        
+                    </div>
+                </section>                  
 
-
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.on( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
+                
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                    <aside class="notes">
 					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
-						<li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
-						<li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
+                        <li>Falsches Resultat</li>
+                        <li>Durch Konfiguration verbessertes Resultat</li>
+                        <li>Korrektes Resultat</li>
+                        <li>Korrektes Resultat</li>
+                        
 					</ul>
-				</section>
+                    </aside>
+                    <h2>Resultate</h2>
+                   
+                        	
+                        <div class="r-stack">
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="https://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+                            <img class="fragment" src="images/dev/resultatStanding1.jpg" alt="Resultat des Zwischenscrhritts" style="height:  400px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
+      
+                        
+                            <img class="fragment" src="images/dev/resultatLying2.jpg" alt="Ausgangslage des Zwischenscrhritts" style="height:  400px; margin: 0 auto 4rem auto; background:transparent;" class="demo-logo">  
+                            
+                            <img class="fragment" src="images/dev/resultatFehlerhaft.jpg" alt="Ausgangslage des Zwischenscrhritts" style="height: 400px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> 
+                                                
+                            <img class="fragment" src="images/dev/resultImprovedConfig.jpg" alt="Ausgangslage des Zwischenscrhritts" style="height:   400px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> 
+        
+                        </div>
+                        
+                </section> 
+                    
+                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                    <aside class="notes">
+					<ul>
+                        <li>Falsches Resultat</li>
+                        <li>Durch Konfiguration verbessertes Resultat</li>
+                        <li>Korrektes Resultat</li>
+                        <li>Korrektes Resultat</li>
+                        
+					</ul>
+                    </aside>
+                    <h2>Resultate</h2>
+                   
+                        	
+                        <div class="r-stack">
+
+                            <div class="fragment">test</div>
+                            <div class="fragment">test2</div>
+                            <div class="fragment">test3</div>
+                            
+
+        
+                        </div>
+                        
+                </section>                      
+                    
+                <section  data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                    <aside class="notes">
+                    ...
+                    </aside>                
+                    <h2>Resultate</h2>
+                    
+                    <ul>
+                        <li>Domänenanlyse</li>
+                        <li>Modellierung und Identifikation von Geburtsmerkmalen</li>
+                        <li>Entwicklung</li>
+                    </ul>  
+                    
+
+                </section>   
+                
+                
+                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                    <aside class="notes">
+					
+                        ...
+                        
+					
+                    </aside>                
+                    <h2>Ausblick</h2>
+                    <p> Vorstufe zu einem auf Machine-Learning-Algorithmen basierenden System im Supervised-Learning-Modus </p>
+                    
+
+                </section>                  
+
+
+
+				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
+					<h1>Fragen? </h1>
+					
+                    <br><br>
+                    <p>Vielen Dank für Ihre Aufmerksamkeit!</p>
 				</section>
 
 			</div>

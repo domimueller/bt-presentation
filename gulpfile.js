@@ -166,10 +166,12 @@ gulp.task('css-core', () => gulp.src(['css/reveal.scss'])
     .pipe(header(banner))
     .pipe(gulp.dest('./dist')))
 
+// gulp task for bachelor thesis presentation
 gulp.task('custom-css', () => gulp.src(['css/custom.scss'])
         .pipe(sass())
         .pipe(gulp.dest('./dist')))
 
+// execute tasks parallel, including gulp task for bachelor thesis presentation
 gulp.task('css', gulp.parallel('css-themes', 'css-core', 'custom-css'))
 
 gulp.task('qunit', () => {
@@ -290,6 +292,8 @@ gulp.task('serve', () => {
         'css/print/*.{sass,scss,css}'
     ], gulp.series('css-core', 'reload'))
 
+    
+    // gulp whatch for bachelor thesis presentation
     gulp.watch([
         'css/*.scss',
         'css/print/*.{sass,scss,css}'
