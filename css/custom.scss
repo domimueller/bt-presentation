@@ -13,11 +13,10 @@
 
 /* Titles */
 h3.firstTitle {font-size: 1.1em}
-h2.containsTT tt, .reveal h2.containsTT {font-size: 1em !important;  } 
-section h2.unimporantTitle {font-size: 1.2em !important ; }
+.containsTT tt, .containsTT h2 {font-size: 1.0em; display: inline-block;}  
+section h2.unimporantTitle {font-size: 1.2em;}
 
-
-/* Lists *
+/* Lists */
 
 li.smallList {font-size: 0.5em !important;}
 li.smallList tt {font-size: 1em;}
@@ -30,10 +29,11 @@ li.smallList tt {font-size: 1em;}
 
 /* further styling*/
 p.small {font-size: 0.8em}
-tt {font-family: monospace; font-size: 0.5em; text-transform: none;  }
+tt {font-family: monospace; font-size: 0.5em; text-transform: none;}
 
-
- {text-transform: none; font-size: 1em; } 
+/* Trait Recognitor pages*/
+section.traitRecognitor .containsTT {margin: 0 0 35px 0}
+section.traitRecognitor img {margin: 0 auto 0rem auto !important} 
 /*********************************************
  * Start Page
  *********************************************/

@@ -191,13 +191,15 @@
                     
 				</section>                
                 
-                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                <section class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
                         <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                       <p>In den folgenden Abbildungen bedeuten grün eingefärbte Flächen, dass das System Konturen erkannt hat, diese aber nicht als Merkmal für eine Kuh in Seitenlage betrachtet. Rote Flächen bedeuten, dass das System diese Kontur als Merkmal für Seitenlage interpretiert.</p>
                     </aside>
-                    
-                    <h2 class="containsTT"><tt>TraitRecognitor</tt>: Überblick</h2>
-
+                    <div class="containsTT">
+                        <tt>TraitRecognitor:</tt>
+                        <h2>Übersicht</h2>
+                    </div>
                     <div class="container">
                         
                         
@@ -227,12 +229,18 @@
                 
 
                 
-                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                <section class="traitRecognitor" data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
-                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                        <p>Um weitere, unwichtige Konturen wie die Lampe zu erkennen, wird ein Verfahren zur Analyse von Farbwerten durchgeführt. Dabei wird in einem ersten Schritt ein Farbbereich für die Lampe definiert. Um einen Richtwert für diesen Farbwert zu erhalten, wird mithilfe eines Bildbearbeitungsprogramms3 ein Farbwert im Bereich der Lampe ausgelesen. Auf Basis dieses Richtwerts wird anschliessend ein Wertebereich für die Farbwerte der zu identifizierenden Lampe festgelegt. Diese Schwellwerte werden der Funktion inRange() von OpenCV zwecks Erstellung eines Binärbilds übergeben. Sämtliche Bereiche mit Farbwerten, die sich zwischen den definierten Schwellwerten befinden, werden im resultierenden Bild weiss dargestellt. Diese entsprechen unwichtigen Bereichen im Bild. Alle anderen Farbewerte sind schwarz. </p>
+                        <p>Dasselbe wird für den Holzträger gemacht. </p>
+                        <p>Durch die Funktion bitwise_or() werden die Bilder so verknüpft, dass im resultierenden Bild sämtliche Bereiche weiss sind, die in einem der beiden oder in beiden Eingangsbildern weiss sind</p>
+                       
                     </aside>
                     
-                    <h2>TraitRecognitor: Binärbild</h2>
+                    <div class="containsTT">
+                        <tt>TraitRecognitor:</tt>
+                        <h2>Binärbild</h2>
+                    </div>
 
                     <div class="container">
                         
@@ -261,16 +269,19 @@
                 </section> 
                 
                 
-                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                <section class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
-                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                        <p>Ausgehend von vorheriger Abbildung  können die als unwichtig identifizierten Bereiche als Konturen erkannt und im Originalbild eingezeichnet werden. Um dies zu erreichen, werden die Funktionen findContours() und drawContours() angewendet. Auf Basis der als unwichtig identifizierten Konturen sind möglichst grosse Flächen aus dem Originalbild zu entfernen, beziehungsweise möglichst grosse Flächen mit schwarzer Farbe zu füllen.</p>
+                       
+                       <p> Die Funktion minEnclosingCircle() wird verwendet, um Kreise zu finden, welche Konturen mit möglichst geringer Fläche umschliessen</p>
                     </aside>
                
-                    <h2 class="unimporantTitle">"TraitRecognitor": Unwichtige Bereiche</h2>
-                    
+                    <div class="containsTT">
+                        <tt>TraitRecognitor:</tt>
+                        <h2 class="unimporantTitle">Unwichtige Bereiche</h2>
+                    </div>                    
 
                     <div class="container">
-                        
                         
                         <div class="col thirdSize left">
                             <img src="images/dev/5binLampeUndHolz.jpg" alt="Lampe und Holz weiss" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">   
@@ -285,7 +296,6 @@
                             <ol>
                                 <tt><li>findContours() </li></tt> 
                                 <tt><li>drawContours()</li></tt>
-                                <tt><li>boundingRect()</li></tt>
                                 <tt><li>minEnclosingCircle()</li></tt>
                                 
                                 
@@ -300,13 +310,19 @@
                     </div>
                 </section>                 
 
-                <section class="implementationContainer" data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                <section class="traitRecognitor"  class="implementationContainer" data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
 
                     <aside class="notes">
-                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+                        <p>boundingRect() bildet Rechtecke, welche die Konturen umschliessen</p>
+                        <p> Für die Messung der Winkel wurde die Funktion fitEllipse() verwendet, welche den Winkel der entsprechenden Ellipse zurückgibt</p>
+                        <p> Dann werden die winkel der Konutren um den Winkel der Lampe bereinigt. Das Vorgehen gleicht grundsätzlich dem Prinzip, das Bild solange zu drehen, bis die Lampe waagrecht im Bild ist und erst dann die Winkel zu messen.</p>
                     </aside>                
-                    <h2>"TraitRecognitor": Winkel</h2>
 
+                    <div class="containsTT">
+                        <tt>TraitRecognitor:</tt>
+                        <h2>Winkel</h2>
+                    </div> 
+                    
                     <div class="container">
  
                         
@@ -322,7 +338,7 @@
                             </div>
                             <ol>
                                 <li class="smallList">Winkel der Lampe messen</li>
-                                <li class="smallList">Winkel bereinigen</li>
+                                <li class="smallList">Winkel der Konturen bereinigen</li>
                                 <li class="smallList">Winkel im Wertebereich <tt>[70&deg;; 110&deg;]</tt></li>
                                 
                                 
@@ -341,14 +357,21 @@
                 
 
                 
-                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                <section class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
   
                    <aside class="notes">
                         <p>Extent= Fläche der Kontur/ Fläche umschliessendes Rechteck</p>
+                       <p>Dabei handelt es sich um das Verhältnis zwischen der Fläche der Kontur und der Fläche des Rechtecks, das die Kontur einschliesst</p>
+                       <p> Ich habe erwartet, dass die Fläche der Kontur der Beine gegenüber dem darum gebildeten Rechteck klein ist. Entsprechend wird als Extent bei Beinen ein tiefer Wert angenommen im Vergleich zum Wert des Extent bei anderen Figuren. Dementsprechend ermöglicht die entwickelte Lösung mit der Konstante EXTENT_MAX die Konfiguration eines Schwellwerts, nach welchem Konturen gefiltert werden.</p>
                     </aside>
-                    <h2>"TraitRecognitor": Extent</h2>
+                                        
                     <div class="container">
  
+                   
+                        <div class="containsTT">
+                            <tt>TraitRecognitor:</tt>
+                            <h2>Extent</h2>
+                        </div>
                         
                         <div class="col fourtyPercentSize left">
                             <img src="images/dev/22AngleCorrectur.jpg" alt="Ausgangslage des Zwischenscrhritts" style="height: auto; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> 
@@ -377,11 +400,18 @@
                                 
                 
                 
-                <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                <section  class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
                         <p>Aspect Ratio= Lange Seite/ kurze Seite</p>
+                       
+                       <p>Annahme: Rechtecke, welche die Beine der Kuh einschliessen, sind langgezogen. Das Verhältnis zwischen Breite und Höhe von Rechtecken (nachfolgend Aspect Ratio genannt) liefert Informationen darüber, wie langgezogen ein Rechteck ist. --> respektive das Verhältnis zwischen der langen und der kurzen Seite</p>
                     </aside>
-                    <h2>"TraitRecognitor": Aspect Ratio</h2>
+                    
+                    <div class="containsTT">
+                        <tt>TraitRecognitor:</tt>
+                        <h2>Aspect Ratio</h2>
+                    </div>                     
+                    
                     <div class="container">
  
                         <div class="col thirdSize left">
@@ -420,6 +450,15 @@
                         <li>Korrektes Resultat</li>
                         <li>Korrektes Resultat</li>
                         
+                        <p>Wichtigste Konfigurationen</p>
+                        <ol>
+                            <li>Filterung nach Winkel</li>
+                            <li>Weitere Farbwerte für die Funktion inRange() als unwichtige Farbbereiche</li>
+                            <li>Schwellwerte für Aspect Ratio, Extent und Winkel</li>
+                            
+                        </ol>
+                        <p>Eine Ausnahme stellt ein nicht voller Stall dar. Leere Boxen ermöglichen der kalbernden Kuh, quer in die Box zu liegen (Müller 2020a). Für Kühe, welche neben einer leeren Box liegen, ist also die Filterung der Konturen nach Winkel nicht sinnvoll. Um dieser Situation gerecht zu werden, kann im entwickelten System mittels Konfiguration filterbyAngle=False die Filterung nach Winkel deaktiviert werden.</p>
+                        
 					</ul>
                     </aside>
                     <h2>Resultate</h2>
@@ -443,13 +482,17 @@
                     
                 <section  data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <aside class="notes">
-                    ...
+                    <p> Der Kern der Domänenanalyse war die Identifikation von Geburtsmerkmalen. Im Wesentlichen hat sich ergeben, dass das System bei Erkennung von seitlichem Liegen und Anwesenheit der Wasser- oder Schleimblase eine Benachrichtigung an die Stakeholder auslösen muss.</p>
+                        
+                    <p>Dabei wurde ein umfassendes System modelliert, welches sowohl die automatische Analyse von Kamerabildern als auch die Benachrichtigung der Stakeholder ermöglicht. Im Domänenmodell wurde auch weiter gedacht, um die Erfassung von medizinischen Daten/ Krankheitsgeschichten usw. zu ermöglichen</p>
+                        
+                    <p>Der Kern des modellierten Systems wurde in Code umgesetzt. Es wurde ein flexibles und konfigurierbares System entwickelt, welches die automatische Analyse von Kamerabildern ermöglicht (Fokus: Seitenlage).</p>
                     </aside>                
                     <h2>Resultate</h2>
                     
                     <ul>
                         <li>Domänenanlyse</li>
-                        <li>Modellierung und Identifikation von Geburtsmerkmalen</li>
+                        <li>Modellierung</li>
                         <li>Entwicklung</li>
                     </ul>  
                     
@@ -459,14 +502,21 @@
                 
                 <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <aside class="notes">
-					
-                        ...
+					<p>
+                    In Bezug auf die Geburtsanalyse können die Resultate der Bildanalyse aus der vorliegenden Arbeit als Grundlage für den Einsatz von Machine Learning verwendet werden. Im Kontext von Machine Learning werden bei einem Klassifikationsproblem die Eingabedaten einer Menge von Klassen oder Kategorien zugeordnet. Im Kontext der vorliegenden Arbeit können Bilder als Eingabedaten den Kategorien „Geburt anstehend“ oder „Geburt nicht anstehend“ zugeordnet werden. Falls ein Bild der Kateogorie „Geburt anstehend“ zugeordnet wird, ist eine weitere Klassifikation nach „Vorbereitungsphase“, „Öffnungsphase“, „Aufweitungsphase“, „Austreibungsphase“ und „Nachgeburtsphase“ denkbar. Weiter könnte ein Bild als Eingabe Grundlage für die Risikobewertung der aktuellen Situation liefern. Dementsprechend könnte ein Bild nach „einfache Geburt“, „normal“, „gefährlich“ und „lebensbedrohlich“ klassifiziert werden. 
+                    </p>    
+                        
+                    <p>Das entwickelte System kann genau diese Trainingsdaten liefern und jedes Bild aus den Trainingsdaten mit einem oder mehreren „Tags“ markieren. Es kann somit als Vorstufe zu einem auf Machine-Learning-Algorithmen basierenden System im Supervised-Learning-Modus dienen.</p>
+                        
+                    <p>Wird diesem Erkennungssystem ein Benachrichtigungssystem nachgeschaltet, können Landwirte und TierärztInnen automatisch benachrichtigt werden.</p>
                         
 					
                     </aside>                
                     <h2>Ausblick</h2>
-                    <p> Vorstufe zu einem auf Machine-Learning-Algorithmen basierenden System im Supervised-Learning-Modus </p>
-                    
+                    <ul> 
+                        <li>Vorstufe zu einem auf Machine-Learning-Algorithmen basierenden System </li>
+                        <li>Nachgelagertes Benachrichtigungssystem</li>
+                    </ul>
 
                 </section>                  
 
