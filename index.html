@@ -83,7 +83,6 @@
 					<section>
                         <aside class="notes">
                             Optimales Management und Überwachung der Geburt wirken diesen Risiken entgegen und vermindern die Eintrittswahrscheinlichkeit von Dystokie und Totgeburt. Genau hier setzt das Projekt an: Die Prognose des Geburtszeitpunkts unterstützt die Entscheidung, ob und wann menschliche Geburtshilfe angebracht ist (Unterstützung zB wie im Bild sichtbar). Die Unterstützung beim Abkalben bewirkt eine Verringerung der Kälbersterblichkeit. Die Vorhersage des Geburtszeitpunkts ist daher sowohl für die Wirtschaftlichkeit der Tierhaltung als auch für das Wohlergehen der Tiere von Bedeutung.
-                            Die Case-Arbeit „Technologische Unterstützung von Landwirten bei der Geburt von Kälbern und bei der Heuernte“ dient als Basis für die BT. Es wurde ein System entwickelt, welches in regelmässigen zeitlichen Abständen Kamerabilder aufnimmt und auf einer Website darstellt. Diese Bilder werden für die Bachelor-Arbeit verwendet.
                         </aside>
                         
                         
@@ -92,26 +91,7 @@
                         <br>
 							<img src="images/2zughilfe.jpg" alt="Zughilfe, unterstützt durch optimale Überwachung" style="height: 350px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 					</section>
-					<section>
-                        
-                        <aside class="notes">
-						<li>Neigungs- und Beschleunigungssensoren für Erkennung von Schwanzhebung und Verhaltensänderungen</li>
-						<li>Wiederkäuersensoren für die Messung des Wiederkäuerverhaltens</li>
-						<li>Intelligente Bauchgürtel für die Erkennung von Adbominalkontraktionen</li>
-						<li>Intravaginale Sensoren erkennen einen Abfall der Körpertemperatur</li>
-                        <li>Vorrichtungen für die Erkennung der Ausstossung der Waden</li>
-                        </aside>                        
-						<h2>Bereits entwickelte Produkte</h2>
-					<ul>
-						<li>Neigungs- und Beschleunigungssensoren</li>
-						<li>Wiederkäuersensoren</li>
-						<li>Intelligente Bauchgürtel</li>
-						<li>Intravaginale Sensoren</li>
-					</ul>	
-                    <p><em>Kritik:</em> Geringe Anzahl Parameter, oftmals Fokus auf Rasse Holstein, invasive Systeme</p>
-                        
 
-					</section>
 					<section>
                         <aside class="notes">
                             <ul>
@@ -122,8 +102,6 @@
                                 <li>Das System arbeitet auf Basis von geometrischen Mustern und visuellen Merkmalen.</li>
                                 <li>Das System arbeitet aus sicherer Entfernung zu den Tieren, sodass es nicht invasiv ist.</li>
                                 <li>Gezielter Benachrichtigungen über den Geburtsverlauf fast in Echtzeit</li>
-                                <li>Intravaginale Sensoren</li>
-                                <li>Kritik: Geringe Anzahl Parameter, oftmals Fokus auf Rasse Holstein, technische Vorrichtungen an Kuh sind leicht zerstörbar  </li>
                             </ul>                            
                         </aside>                               
 						<h2>Ziele</h2>
@@ -131,7 +109,7 @@
 					<ul>
 						<li>Aufwand für die Überwachung des Geburtsverlaufs reduzieren</li>
                         <li>Automatische Analyse von Kamerabildern</li>
-                        <li>Arbeit Basis von geometrischen Mustern und visuellen Merkmalen.</li>
+                        <li>Arbeit auf Basis von geometrischen Mustern und visuellen Merkmalen.</li>
                         <li>Sichere Entfernung zu den Tieren</li>
 					</ul>						
 
@@ -183,7 +161,7 @@
                         
                         Die Klasse "ContourDrawer" zeichnet ausgehend von einer Konfiguration die Konturen in ein Bild ein, welche com ConntourFinder gefunden wurden. <br> <br>
                         
-                        Die Klasse "TraitRecognitor" filtert die gefunden Konturen und hat zum Ziel, zu erkkenen, ob  sich die Kuh in Seitenlage befindet oder nicht. Mehr dazu später, da es besonders interessant ist und ein spezifisches Vorgehen angwewendet wurde.<br> <br>
+                        Die Klasse "TraitRecognitor" filtert die gefunden Konturen und hat zum Ziel, zu erkenen, ob  sich die Kuh in Seitenlage befindet oder nicht. Mehr dazu später, da es besonders interessant ist und ein spezifisches Vorgehen angwewendet wurde.<br> <br>
                     </aside>
                     <h3>Lösung</h3>
 
@@ -445,10 +423,11 @@
                 <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                     <aside class="notes">
 					<ul>
+                       <li>Korrektes Resultat</li>
+                        <li>Korrektes Resultat</li>
                         <li>Falsches Resultat</li>
                         <li>Durch Konfiguration verbessertes Resultat</li>
-                        <li>Korrektes Resultat</li>
-                        <li>Korrektes Resultat</li>
+
                         
                         <p>Wichtigste Konfigurationen</p>
                         <ol>
@@ -503,7 +482,7 @@
                 <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <aside class="notes">
 					<p>
-                    In Bezug auf die Geburtsanalyse können die Resultate der Bildanalyse aus der vorliegenden Arbeit als Grundlage für den Einsatz von Machine Learning verwendet werden. Im Kontext von Machine Learning werden bei einem Klassifikationsproblem die Eingabedaten einer Menge von Klassen oder Kategorien zugeordnet. Im Kontext der vorliegenden Arbeit können Bilder als Eingabedaten den Kategorien „Geburt anstehend“ oder „Geburt nicht anstehend“ zugeordnet werden. Falls ein Bild der Kateogorie „Geburt anstehend“ zugeordnet wird, ist eine weitere Klassifikation nach „Vorbereitungsphase“, „Öffnungsphase“, „Aufweitungsphase“, „Austreibungsphase“ und „Nachgeburtsphase“ denkbar. Weiter könnte ein Bild als Eingabe Grundlage für die Risikobewertung der aktuellen Situation liefern. Dementsprechend könnte ein Bild nach „einfache Geburt“, „normal“, „gefährlich“ und „lebensbedrohlich“ klassifiziert werden. 
+                    In Bezug auf die Geburtsanalyse können die Resultate der Bildanalyse aus der vorliegenden Arbeit als Grundlage für den Einsatz von Machine Learning verwendet werden. Im Kontext von Machine Learning werden bei einem Klassifikationsproblem die Eingabedaten einer Menge von Klassen oder Kategorien zugeordnet. Im Kontext der vorliegenden Arbeit können Bilder als Eingabedaten den Kategorien „Geburt anstehend“ oder „Geburt nicht anstehend“ zugeordnet werden. 
                     </p>    
                         
                     <p>Das entwickelte System kann genau diese Trainingsdaten liefern und jedes Bild aus den Trainingsdaten mit einem oder mehreren „Tags“ markieren. Es kann somit als Vorstufe zu einem auf Machine-Learning-Algorithmen basierenden System im Supervised-Learning-Modus dienen.</p>
