@@ -1,0 +1,221 @@
+/**
+ *
+ *
+ * CUSTOM STYLES FOR BACHELOR THESIS PRESENTATION
+ * *
+ */
+/**
+ * Layout helpers.
+ */
+.reveal .stretch,
+.reveal .r-stretch {
+  max-width: none;
+  max-height: none; }
+
+.reveal pre.stretch code,
+.reveal pre.r-stretch code {
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box; }
+
+.reveal .r-stack {
+  display: grid; }
+
+.reveal .r-stack > * {
+  grid-area: 1/1;
+  margin: auto; }
+
+.reveal .r-vstack,
+.reveal .r-hstack {
+  display: flex; }
+
+.reveal .r-vstack {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.reveal .r-hstack {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+.reveal .items-stretch {
+  align-items: stretch; }
+
+.reveal .items-start {
+  align-items: flex-start; }
+
+.reveal .items-center {
+  align-items: center; }
+
+.reveal .items-end {
+  align-items: flex-end; }
+
+.reveal .justify-between {
+  justify-content: space-between; }
+
+.reveal .justify-around {
+  justify-content: space-around; }
+
+.reveal .justify-start {
+  justify-content: flex-start; }
+
+.reveal .justify-center {
+  justify-content: center; }
+
+.reveal .justify-end {
+  justify-content: flex-end; }
+
+/*********************************************
+ * GENERAL
+ *********************************************/
+/* Titles */
+h3.firstTitle {
+  font-size: 1.1em; }
+
+.containsTT tt, .containsTT h2 {
+  font-size: 1.0em;
+  display: inline-block; }
+
+section h2.unimporantTitle {
+  font-size: 1.2em; }
+
+/* Lists */
+li.smallList {
+  font-size: 0.5em !important; }
+
+li.smallList tt {
+  font-size: 1em; }
+
+/* links, controls */
+.reveal section a {
+  color: white; }
+
+.reveal .controls {
+  color: white; }
+
+.reveal .progress {
+  color: white; }
+
+/* further styling*/
+p.small {
+  font-size: 0.8em; }
+
+tt {
+  font-family: monospace;
+  font-size: 0.5em;
+  text-transform: none; }
+
+/* Trait Recognitor pages*/
+section.traitRecognitor .containsTT {
+  margin: 0 0 35px 0; }
+
+section.traitRecognitor img {
+  margin: 0 auto 0rem auto !important; }
+
+/*********************************************
+ * Start Page
+ *********************************************/
+.startpage.small {
+  display: inline-block; }
+
+span.customCicrle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  display: inline-block;
+  vertical-align: middle; }
+
+div.divider {
+  position: relative;
+  display: inline-block;
+  line-height: 1.2em;
+  height: 1.2em;
+  width: 1.2em; }
+
+/*********************************************
+ * Allow Multiple Columns in a Slide
+ *********************************************/
+.container {
+  position: relative; }
+
+.col {
+  position: relative;
+  display: inline-block; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.container .col.halfSize {
+  width: 50%; }
+
+.container .col.thirdSize {
+  width: 33%; }
+
+.container .col.quarterSize {
+  width: 25%; }
+
+.container .col.twentyPercentSize {
+  width: 20%; }
+
+.container .col.fourtyPercentSize {
+  width: 40%; }
+
+/*********************************************
+ * Font Aweseome Symbols
+ *********************************************/
+.fa-container i {
+  height: 50px;
+  width: 50px;
+  display: inline-block; }
+
+.fa-container.rightArrowContainer i {
+  width: 150px;
+  font-size: 100px; }
+
+.ending i {
+  font-size: 180px; }
+
+.scrollArrow i {
+  font-size: 100px; }
+
+/*********************************************
+ *  Hover a Elements: Deactivate blue link 
+    color and perform shake animation
+ *********************************************/
+a:hover i, a:visited i, a:active i {
+  color: white; }
+
+a:hover i {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite; }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
