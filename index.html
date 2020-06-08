@@ -35,8 +35,11 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
 				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
-                
+                    <aside class="notes">
+                        Ich begrüsse Sie zur Präsentation meiner Bachelor-Thesis. Im Rahmen der Arbeit wurden Geburtsmerkmale von Kühen identifiziert. Anschliessend wurde die Softwarebibliothek OpenCV für die automatische Analyse von Bildern angewendet
+                    </aside> 
 					<img src="images/1result.jpg" alt="Resultat der Bachelor Thesis" style="height: 250px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
                     
 					<h3 class="firstTitle">Automatische Analyse von Kamerabildern zur Prognose des Geburtszeitpunkts von Kälbern</h3>
@@ -50,10 +53,13 @@
 				</section>
 
                 <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
+                    
+                        <aside class="notes">
+                            Kommen wir zum Inhalt der Präsentation. Nachdem wir die Ausgangslage und Motivation der Arbeit besprochen haben, stelle ich die Ergebnisse der Domänenanalyse vor. Anschliessend wird die entwickelte Lösung vorgestellt und ein Fokus auf ausgewählte Bereiche in der Umsetzung gesetzt. Danach werden die Resultate der Arbeit erläutert und abschliessend wir ein Ausblick über den untersuchten Bereich gemacht.
+                        </aside>                    
                     <h2>Inhalt</h2>
 					<ul>
 						<li>Ausgangslage und Motivation</li>
-						<li>Methodisches Vorgehen</li>
 						<li>Domänenanalyse</li>
 						<li>Lösung</li>
 						<li>Umsetzung</li>                        
@@ -68,6 +74,18 @@
 				<section>
 					<section>
                         <aside class="notes">
+                            <ul>
+                                <li>Kritisches Ereignis für Kuh und Kalb</li>
+                                <li>wirtschaftliche Konsequenzen: </li>
+                                    <ul>
+                                    <li>Kosten für Dienstleistung des Tierarztes</li>
+                                    <li>nicht verkaufte Tiere</li>
+                                    <li>tiefere Milchproduktion, vorzeitige Schlachtung</li>
+                                </ul>
+                                <li>Schwere Geburten beinträchtigen Wohlergehen der Tiere</li>
+                            </ul>
+                            
+                            ################################################# <br>
                             Die Geburt ist ein kritisches Ereignis für Kuh und Kalb und oftmals Auslöser für nachfolgende Krankheiten.
                             Schwere Geburten haben wirtschaftliche Konsequenzen in Form von Kosten für die Dienstleistungen des Tierarztes, nicht verkauften Kälbern, tieferer Milchproduktion oder vorzeitiger Schlachtung. Darüber hinaus ist Dystokie schmerzvoll und beeinträchtigt das Wohlergehen der Kühe.
                         </aside>
@@ -82,6 +100,16 @@
 					</section>
 					<section>
                         <aside class="notes">
+                            <ul>
+                                <li>Im Bild sieht man, wie der Auftraggeber Geburtsunterstützung leistet.</li>
+                                <li>Prognose des Geburtszeitpunkts unterstützt die Entscheidung, ob und wann menschliche Geburtshilfe angebracht ist.</li>
+                                <li>Hier setzt das Projekt an! </li>
+                                <li>Optimales Management und Überwachung der Geburt verringert die Risiken der Geburt.</li>
+                    
+                                
+                            </ul>
+                            ################################################# <br>
+                            
                             Optimales Management und Überwachung der Geburt wirken diesen Risiken entgegen und vermindern die Eintrittswahrscheinlichkeit von Dystokie und Totgeburt. Genau hier setzt das Projekt an: Die Prognose des Geburtszeitpunkts unterstützt die Entscheidung, ob und wann menschliche Geburtshilfe angebracht ist (Unterstützung zB wie im Bild sichtbar). Die Unterstützung beim Abkalben bewirkt eine Verringerung der Kälbersterblichkeit. Die Vorhersage des Geburtszeitpunkts ist daher sowohl für die Wirtschaftlichkeit der Tierhaltung als auch für das Wohlergehen der Tiere von Bedeutung.
                         </aside>
                         
@@ -102,7 +130,10 @@
                                 <li>Das System arbeitet auf Basis von geometrischen Mustern und visuellen Merkmalen.</li>
                                 <li>Das System arbeitet aus sicherer Entfernung zu den Tieren, sodass es nicht invasiv ist.</li>
                                 <li>Gezielter Benachrichtigungen über den Geburtsverlauf fast in Echtzeit</li>
-                            </ul>                            
+                            </ul>   
+                            
+                            ################################################# <br>      
+                            Nun gehen wir kurz auf die wichtigsten Ziele der Bachelor-Arbeit ein. Die übergeordneten Ziele ist grundsätzlichz, den Aufwand für die Überwachung des Geburtsverlaufs zu reduzieren und Geburtsrsisiken zu senken. Darüber hinaus soll das entwickelte System als Entscheidungsunterstützung dienen. Es soll auf Basis der Analyse von geometrisches Mustern und visuellen Merkamlen Kamerabilder automatisch analysieren.
                         </aside>                               
 						<h2>Ziele</h2>
                         
@@ -119,9 +150,23 @@
                 
 				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
                     <aside class="notes">
+                        
+                        <ul>
+                            <li>Tabelle ist integraler Bestandteil des zu entwickeltnden System.</li>
+                            <li> Umsetzung der Merkmale (Kuh liegend usw.) in Daten, die man algorithmisch auswerten kann</li>
+                            <li>Tabelle codiert Domänenwissen für die Identfizierung von Geburtsmerkmalen</li>
+                            <li>Experten haben bewertet, wie stark die Anwesenheit oder Abwesenheit eines Merkmals einen Hinweis für eine Geburt liefert. </li>
+                            <li>  Die Spaltengruppen „Anwesenheit“ und „Abwesenheit“ = Rohdaten, welche auf Interviews basieren. Die Spalten der Gruppe „Mittelwert“ entsprechen jeweils dem gewichteten Mittelwert der Rohdaten aus den vorgelagerten Spaltengruppen.</li>
+                            <li> Eine Spalte jeweils die Gewichtung und eine die Bewertung des Hinweises</li>
+                            <li>nicht alle Experten dieselben Merkmale --> wenn ein Merkmal nicht bewertet wurde: Gewichtung = 0 und Bewertung =99</li>
+                            <li>Ergebnis: Seitenlage und Anwesnheit der Fruchtblasen sind die wichtigsten Geburtsmerkmale--> System muss diese erkennen. </li>
+                        </ul>
+                        ################################################# <br>      
+
+                        
                         Zusätzlich wird die Programmiersprache R für die Auswertung der Interviews genutzt. Vorteil: Enge Verzahnung mit Latex.
                         
-                        In der Tabelle wird Domänenwissen von Prof. Dr. med. vet. Samuel Kohler und Dr. med. vet. Gaby Hirsbrunner codiert. Dieses wurde bei Interviews per Videotelefonie erhoben. Beide befragte Personen haben die An- und Abwesenheit von Merkmalen in Bezug auf die Stärke des Hinweises auf eine bevorstehende Geburt bewertet. Die Tabelle besteht nebst der Aufzählung von Merkmalen aus den drei Spaltengruppen „Anwesenheit“, „Abwesenheit“ und „Mittelwert“. Die Gruppen „Anwesenheit“ und „Abwesenheit“ repräsentieren dabei die Rohdaten, welche auf der Durchführung von Interviews basieren. Die Spalten der Gruppe „Mittelwert“ entsprechen jeweils dem gewichteten Mittelwert der Rohdaten aus den vorgelagerten Spaltengruppen.
+                        In der Tabelle wird Domänenwissen von Prof. Dr. med. vet. Samuel Kohler und Dr. med. vet. Gaby Hirsbrunner codiert. Dieses wurde bei Interviews per Videotelefonie erhoben. Beide befragte Personen haben die An- und Abwesenheit von Merkmalen in Bezug auf die Stärke des Hinweises auf eine bevorstehende Geburt bewertet. Die Gruppen „Anwesenheit“ und „Abwesenheit“ repräsentieren dabei die Rohdaten, welche auf der Durchführung von Interviews basieren. Die Spalten der Gruppe „Mittelwert“ entsprechen jeweils dem gewichteten Mittelwert der Rohdaten aus den vorgelagerten Spaltengruppen.
                         Für die gesammelten Daten zur An- und Abwesenheit von Merkmalen sind je vier Spalten vorhanden. Eine Spalte repräsentiert jeweils die Bewertungen der Tierärzte und eine weitere Spalte entspricht der Gewichtung dieser Bewertung. 
                         
                         Während der Durchführung der Interviews hatten die ExpertInnen die Möglichkeit, weitere Geburtsmerkmale hinzuzufügen und zu bewerten. Deshalb haben nicht beide Veterinäre sämtliche Merkmale bewertet. Falls einer davon die Anwesenheit oder Abwesenheit eines Merkmals nicht bewertet hat, ist dies mit Bewertung = 99 codiert. Diese Bewertung wird dementsprechend nicht gewichtet, also Gewichtung = 0. 
@@ -135,6 +180,18 @@
                 
 				<section data-transition="slide" data-background="#002b36" data-background-transition="zoom"> 
                     <aside class="notes"> 
+                        
+                        
+                        <ul>
+                            <li>Darstellung von einigen fachlich interessanten Klassen </li>
+                            <li>"ImageProcessor" verarbeitet Bilder unter Verwendung der OpenCV Bibliothek. Bilder als Matrizen behandelt, zB Multuolikation mit einem Skalar zur Aufhellung. Weiter: Schwellwertverfahren für die Erstellung von Binräbildern oder Histrogramme glätten.</li>
+                            <li>ContourFinder: Sucht abhängig von mitgegebener Konfiguration Konturen in Bild</li>
+                            <li>ContourDrawer: zeichnet diese Konturen in ein Bild win.</li>
+                            <li>TraitRecognitor filtert die gefunden Konturen und hat zum Ziel, zu erkennen, ob sich die Kuh in Seitenlage befindet oder nicht. Ist besonders interessant und wird weiter behandelt. </li>
+                             
+                        </ul>
+                         ################################################# <br>      
+                      
                         UNBEDINGT DARSTELLUNG MIT ZOOM FUNKTION ALT+KLICK <br> <br>
                         
                         Ich gehe auf eine Auswahl von Klassen ein, welche fachlich interessant sind.  <br> <br>
@@ -154,7 +211,15 @@
                 
                 <section class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
-                        <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
+
+                        ################################################# <br>   
+                       <ul>
+                        <li>Originalbild links, Resultat rechts</li>
+                        <li>grüne Fläche = detektierte Konturen, kein Merkmal für Seitenlage</li>
+                        <li>rote Fläche= Merkmal für Seitenlage</li>
+                       </ul>
+
+                       <p>Im folgenden zeige ich, wie ich aus dem Originalbild links, das gewünschte Resultat rechts errecht habe.</p>
                        <p>In den folgenden Abbildungen bedeuten grün eingefärbte Flächen, dass das System Konturen erkannt hat, diese aber nicht als Merkmal für eine Kuh in Seitenlage betrachtet. Rote Flächen bedeuten, dass das System diese Kontur als Merkmal für Seitenlage interpretiert.</p>
                     </aside>
                     <div class="containsTT">
@@ -192,6 +257,20 @@
                 
                 <section class="traitRecognitor" data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
+                       
+                        <ul>
+                            <li>Unwichtige Konturen erkennen um den wichtigen Bereich einzugrenzen--> zB Lampe</li> 
+                            <li> Analyse von Farbwerten </li>
+                            <li>Mit Pipettenwerkzeug eines Bildbearbeitungprogramm Farbwerte augelesen und für lampe einen Farbbereich festlegen</li>
+                            <li>Binärbild mit inRange(): weiss=lampe, Rest schwarz</li>
+                            <li>Wiederholen für Holzträger</li>
+                            <li> Zwischenresultat: Ein Bild mit Lampe = weiss, ein Bild mit Holzträger = weiss</li>
+                            <li>Verknüpfung der Bilder als Matrizen: überall wo in erster oder zweiter Matrix eine 1 im Zielbild eine 1. </li>
+                            <li>Resultat: sämtliche Bereiche weiss, welche Farbwerte der Lampe oder des Holzträgers darstellen</li>
+                       </ul>
+                       
+                       ################################################# <br>   
+                       
                         <p>Um weitere, unwichtige Konturen wie die Lampe zu erkennen, wird ein Verfahren zur Analyse von Farbwerten durchgeführt. Dabei wird in einem ersten Schritt ein Farbbereich für die Lampe definiert. Um einen Richtwert für diesen Farbwert zu erhalten, wird mithilfe eines Bildbearbeitungsprogramms3 ein Farbwert im Bereich der Lampe ausgelesen. Auf Basis dieses Richtwerts wird anschliessend ein Wertebereich für die Farbwerte der zu identifizierenden Lampe festgelegt. Diese Schwellwerte werden der Funktion inRange() von OpenCV zwecks Erstellung eines Binärbilds übergeben. Sämtliche Bereiche mit Farbwerten, die sich zwischen den definierten Schwellwerten befinden, werden im resultierenden Bild weiss dargestellt. Diese entsprechen unwichtigen Bereichen im Bild. Alle anderen Farbewerte sind schwarz. </p>
                         <p>Dasselbe wird für den Holzträger gemacht. </p>
                         <p>Durch die Funktion bitwise_or() werden die Bilder so verknüpft, dass im resultierenden Bild sämtliche Bereiche weiss sind, die in einem der beiden oder in beiden Eingangsbildern weiss sind</p>
@@ -232,7 +311,15 @@
                 
                 <section class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
-                        <p>Ausgehend von vorheriger Abbildung  können die als unwichtig identifizierten Bereiche als Konturen erkannt und im Originalbild eingezeichnet werden. Um dies zu erreichen, werden die Funktionen findContours() und drawContours() angewendet. Auf Basis der als unwichtig identifizierten Konturen sind möglichst grosse Flächen aus dem Originalbild zu entfernen, beziehungsweise möglichst grosse Flächen mit schwarzer Farbe zu füllen.</p>
+                       <ul>
+                           <li>Konturen suchen in vorheriger Abbildung</li>
+                           <li>unwichtige Fläche maximieren und mit schwarzer Farbe füllen</li>
+                           <li>minEnclosingCircle findet Kreise, welche die Kontur mir möglichst geringer Fläche umschliessen</li>
+                       </ul>
+                       ################################################# <br>   
+                       
+                       
+                       <p>Ausgehend von vorheriger Abbildung  können die als unwichtig identifizierten Bereiche als Konturen erkannt und im Originalbild eingezeichnet werden. Um dies zu erreichen, werden die Funktionen findContours() und drawContours() angewendet. Auf Basis der als unwichtig identifizierten Konturen sind möglichst grosse Flächen aus dem Originalbild zu entfernen, beziehungsweise möglichst grosse Flächen mit schwarzer Farbe zu füllen.</p>
                        
                        <p> Die Funktion minEnclosingCircle() wird verwendet, um Kreise zu finden, welche Konturen mit möglichst geringer Fläche umschliessen</p>
                     </aside>
@@ -274,10 +361,19 @@
                 <section class="traitRecognitor"  class="implementationContainer" data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
 
                     <aside class="notes">
-                        <p>boundingRect() bildet Rechtecke, welche die Konturen umschliessen</p>
-                        <p> Für die Messung der Winkel wurde die Funktion fitEllipse() verwendet, welche den Winkel der entsprechenden Ellipse zurückgibt</p>
-                        <p> Dann werden die winkel der Konutren um den Winkel der Lampe bereinigt. Das Vorgehen gleicht grundsätzlich dem Prinzip, das Bild solange zu drehen, bis die Lampe waagrecht im Bild ist und erst dann die Winkel zu messen.</p>
-                    </aside>                
+   
+                        
+                        <li>boundingRect() bildet Rechtecke, welche die Konturen umschliessen</li>
+                        <li> Messung der Winkel der Konturen</li>
+                        <li>Wissen: Lampe ist waagrecht im Raum</li>
+                        <li> Dann werden die Winkel der Konturen um den Winkel der Lampe bereinigt. Das Vorgehen gleicht grundsätzlich dem Prinzip, das Bild solange zu drehen, bis die Lampe waagrecht im Bild ist und erst dann die Winkel zu messen.</li>
+                        <li>Nun werden Winkel zwischen 70 und 110 Grad berücksichtigt, da Beine bei der Seitenlage ca 90 Grad haben </li>
+                        <br>
+                        
+                        ###################################### <br>
+                         <li>Für die Messung der Winkel wurde die Funktion fitEllipse() verwendet, welche den Winkel der entsprechenden Ellipse zurückgibt</li>
+                        <li> Dann werden die Winkel der Konturen um den Winkel der Lampe bereinigt. Das Vorgehen gleicht grundsätzlich dem Prinzip, das Bild solange zu drehen, bis die Lampe waagrecht im Bild ist und erst dann die Winkel zu messen.</li>
+                        </aside>                
 
                     <div class="containsTT">
                         <tt>TraitRecognitor:</tt>
@@ -321,9 +417,14 @@
                 <section class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
   
                    <aside class="notes">
-                        <p>Extent= Fläche der Kontur/ Fläche umschliessendes Rechteck</p>
-                       <p>Dabei handelt es sich um das Verhältnis zwischen der Fläche der Kontur und der Fläche des Rechtecks, das die Kontur einschliesst</p>
-                       <p> Ich habe erwartet, dass die Fläche der Kontur der Beine gegenüber dem darum gebildeten Rechteck klein ist. Entsprechend wird als Extent bei Beinen ein tiefer Wert angenommen im Vergleich zum Wert des Extent bei anderen Figuren. Dementsprechend ermöglicht die entwickelte Lösung mit der Konstante EXTENT_MAX die Konfiguration eines Schwellwerts, nach welchem Konturen gefiltert werden.</p>
+                       <li>Dabei handelt es sich um das Verhältnis zwischen der Fläche der Kontur und der Fläche des Rechtecks, das die Kontur einschliesst</li>
+                       <li> Erwartung: Fläche der Kontur der Beine gegenüber dem darum gebildeten Rechteck ist klein. </li>
+                        <li>Entsprechend wird als Extent bei Beinen ein tiefer Wert angenommen im Vergleich zum Wert des Extent bei anderen Konturen.</li> 
+                       <li>Ergebnis: weiter Konturen können gefiltert werden</li>
+                    ######################<br>
+                   <p>Extent= Fläche der Kontur/ Fläche umschliessendes Rechteck</p>
+                    <p>entwickelte Lösung ermöglicht mit der Konstante EXTENT_MAX die Konfiguration eines Schwellwerts, nach welchem Konturen gefiltert werden.</p>
+
                     </aside>
                                         
                     <div class="container">
@@ -365,7 +466,8 @@
                    <aside class="notes">
                         <p>Aspect Ratio= Lange Seite/ kurze Seite</p>
                        
-                       <p>Annahme: Rechtecke, welche die Beine der Kuh einschliessen, sind langgezogen. Das Verhältnis zwischen Breite und Höhe von Rechtecken (nachfolgend Aspect Ratio genannt) liefert Informationen darüber, wie langgezogen ein Rechteck ist. --> respektive das Verhältnis zwischen der langen und der kurzen Seite</p>
+                       <p>Annahme: Rechtecke, welche die Beine der Kuh einschliessen, sind langgezogen.</p> 
+                       <p>Langgezogen: Verhältnis zwischen Breite und Höhe von Rechtecken (nachfolgend Aspect Ratio genannt) liefert Informationen darüber, wie langgezogen ein Rechteck ist. --> respektive das Verhältnis zwischen der langen und der kurzen Seite</p>    
                     </aside>
                     
                     <div class="containsTT">
@@ -419,7 +521,7 @@
                             <li>Schwellwerte für Aspect Ratio, Extent und Winkel</li>
                             
                         </ol>
-                        <p>Eine Ausnahme stellt ein nicht voller Stall dar. Leere Boxen ermöglichen der kalbernden Kuh, quer in die Box zu liegen (Müller 2020a). Für Kühe, welche neben einer leeren Box liegen, ist also die Filterung der Konturen nach Winkel nicht sinnvoll. Um dieser Situation gerecht zu werden, kann im entwickelten System mittels Konfiguration filterbyAngle=False die Filterung nach Winkel deaktiviert werden.</p>
+                        <p>Leere Boxen: Eine Ausnahme stellt ein nicht voller Stall dar. Leere Boxen ermöglichen der kalbernden Kuh, quer in die Box zu liegen (Müller 2020a). Für Kühe, welche neben einer leeren Box liegen, ist also die Filterung der Konturen nach Winkel nicht sinnvoll. Um dieser Situation gerecht zu werden, kann im entwickelten System mittels Konfiguration filterbyAngle=False die Filterung nach Winkel deaktiviert werden.</p>
                         
 					</ul>
                     </aside>
@@ -444,11 +546,20 @@
                     
                 <section  data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <aside class="notes">
-                    <p> Der Kern der Domänenanalyse war die Identifikation von Geburtsmerkmalen. Im Wesentlichen hat sich ergeben, dass das System bei Erkennung von seitlichem Liegen und Anwesenheit der Wasser- oder Schleimblase eine Benachrichtigung an die Stakeholder auslösen muss.</p>
                         
-                    <p>Dabei wurde ein umfassendes System modelliert, welches sowohl die automatische Analyse von Kamerabildern als auch die Benachrichtigung der Stakeholder ermöglicht. Im Domänenmodell wurde auch weiter gedacht, um die Erfassung von medizinischen Daten/ Krankheitsgeschichten usw. zu ermöglichen</p>
-                        
-                    <p>Der Kern des modellierten Systems wurde in Code umgesetzt. Es wurde ein flexibles und konfigurierbares System entwickelt, welches die automatische Analyse von Kamerabildern ermöglicht (Fokus: Seitenlage).</p>
+                        <ul><li>Geburtsmerkmale von Kühen identifiziert und bewertet. --> anschliessend in Daten umgesetzt, die man algorithmisch auswerten kann. .</li>
+                            <li>Domänenanalyse: bei Erkennung von seitlichem Liegen und Anwesenheit der Wasser- oder Schleimblase eine Benachrichtigung </li>
+                            <li> umfassendes System modelliert, welches  automatische Analyse von Kamerabildern als auch die Benachrichtigung ermöglicht</li>
+                            <li>Kern des modellierten Systems in Code, für  automatische Analyse von Kamerabildern (Fokus: Seitenlage)</li>
+                            <li>Anschliessend wurde die Softwarebibliothek OpenCV für die automatische Analyse von Bildern angewendet</li>
+                        </ul>
+                        ################################################# <br>   
+    
+                        <p> Der Kern der Domänenanalyse war die Identifikation von Geburtsmerkmalen. Im Wesentlichen hat sich ergeben, dass das System bei Erkennung von seitlichem Liegen und Anwesenheit der Wasser- oder Schleimblase eine Benachrichtigung an die Stakeholder auslösen muss.</p>
+
+                        <p>Dabei wurde ein umfassendes System modelliert, welches sowohl die automatische Analyse von Kamerabildern als auch die Benachrichtigung der Stakeholder ermöglicht. Im Domänenmodell wurde auch weiter gedacht, um die Erfassung von medizinischen Daten/ Krankheitsgeschichten usw. zu ermöglichen</p>
+
+                        <p>Der Kern des modellierten Systems wurde in Code umgesetzt. Es wurde ein flexibles und konfigurierbares System entwickelt, welches die automatische Analyse von Kamerabildern ermöglicht (Fokus: Seitenlage).</p>
                     </aside>                
                     <h2>Resultate</h2>
                     
@@ -464,14 +575,24 @@
                 
                 <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <aside class="notes">
-					<p>
-                    In Bezug auf die Geburtsanalyse können die Resultate der Bildanalyse aus der vorliegenden Arbeit als Grundlage für den Einsatz von Machine Learning verwendet werden. Im Kontext von Machine Learning werden bei einem Klassifikationsproblem die Eingabedaten einer Menge von Klassen oder Kategorien zugeordnet. Im Kontext der vorliegenden Arbeit können Bilder als Eingabedaten den Kategorien „Geburt anstehend“ oder „Geburt nicht anstehend“ zugeordnet werden. 
-                    </p>    
+                    
+                        <ul>
+                            <li>Grundlage für auf ML-basierendes System</li>
+                            <li>Klassifkationsproblem könnte gelöst werden: Kategorien zb "Geburt anstehend" oder "Geburt nicht anstehend"</li>
+                            <li>Das entwickelte System kann Trainingsdaten liefern</li>
+                            <li>jedes Bild mit Tag markieren</li>
+                            <li>Vorstugfe für System mit ML</li>
+                            <li>Diesem Erkennungssystem kann ein Benachrichtigungssystem nachgeschaltet werden, damit  Landwirte und TierärztInnen automatisch benachrichtigt werden</li>
+                        </ul>
+                        ################################################# <br>   
+
                         
-                    <p>Das entwickelte System kann genau diese Trainingsdaten liefern und jedes Bild aus den Trainingsdaten mit einem oder mehreren „Tags“ markieren. Es kann somit als Vorstufe zu einem auf Machine-Learning-Algorithmen basierenden System im Supervised-Learning-Modus dienen.</p>
-                        
-                    <p>Wird diesem Erkennungssystem ein Benachrichtigungssystem nachgeschaltet, können Landwirte und TierärztInnen automatisch benachrichtigt werden.</p>
-                        
+                        <p>In Bezug auf die Geburtsanalyse können die Resultate der Bildanalyse aus der vorliegenden Arbeit als Grundlage für den Einsatz von Machine Learning verwendet werden. Im Kontext von Machine Learning werden bei einem Klassifikationsproblem die Eingabedaten einer Menge von Klassen oder Kategorien zugeordnet. Im Kontext der vorliegenden Arbeit können Bilder als Eingabedaten den Kategorien „Geburt anstehend“ oder „Geburt nicht anstehend“ zugeordnet werden. </p>    
+
+                        <p>Das entwickelte System kann genau diese Trainingsdaten liefern und jedes Bild aus den Trainingsdaten mit einem oder mehreren „Tags“ markieren. Es kann somit als Vorstufe zu einem auf Machine-Learning-Algorithmen basierenden System im Supervised-Learning-Modus dienen.</p>
+
+                        <p>Wird diesem Erkennungssystem ein Benachrichtigungssystem nachgeschaltet, können Landwirte und TierärztInnen automatisch benachrichtigt werden.</p>
+
 					
                     </aside>                
                     <h2>Ausblick</h2>
