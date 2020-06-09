@@ -55,7 +55,7 @@
                 <section data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                     
                         <aside class="notes">
-                            Kommen wir zum Inhalt der Präsentation. Nachdem wir die Ausgangslage und Motivation der Arbeit besprochen haben, stelle ich die Ergebnisse der Domänenanalyse vor. Anschliessend wird die entwickelte Lösung vorgestellt und ein Fokus auf ausgewählte Bereiche in der Umsetzung gesetzt. Danach werden die Resultate der Arbeit erläutert und abschliessend wir ein Ausblick über den untersuchten Bereich gemacht.
+                            Kommen wir zum Inhalt der Präsentation. Nachdem wir die Ausgangslage und Motivation der Arbeit besprochen haben, stelle ich die Ergebnisse der Domänenanalyse vor. Anschliessend wird die entwickelte Lösung vorgestellt und ausgewählte Bereiche der Umsetzung werden fokussiert. Danach werden die Resultate der Arbeit erläutert und abschliessend wir ein Ausblick über den untersuchten Bereich gemacht.
                         </aside>                    
                     <h2>Inhalt</h2>
 					<ul>
@@ -76,13 +76,16 @@
                         <aside class="notes">
                             <ul>
                                 <li>Kritisches Ereignis für Kuh und Kalb</li>
-                                <li>wirtschaftliche Konsequenzen: </li>
+                                <li>Schwere Geburten: wirtschaftliche Konsequenzen: </li>
                                     <ul>
                                     <li>Kosten für Dienstleistung des Tierarztes</li>
-                                    <li>nicht verkaufte Tiere</li>
                                     <li>tiefere Milchproduktion, vorzeitige Schlachtung</li>
                                 </ul>
                                 <li>Schwere Geburten beinträchtigen Wohlergehen der Tiere</li>
+                                <ul>
+                                    <li>Schmerzvoll</li>
+                                    <li>Auslöser für nachfolgende Krankheiten</li>
+                                </ul>
                             </ul>
                             
                             ################################################# <br>
@@ -102,9 +105,11 @@
                         <aside class="notes">
                             <ul>
                                 <li>Im Bild sieht man, wie der Auftraggeber Geburtsunterstützung leistet.</li>
+                                <li>Mit einer Geburtskette wird gezogen, um die Kuh bei der Geburt zu unterstützen.</li>
+                                <li>Hier setzt das Projekt an! </li>                                
                                 <li>Prognose des Geburtszeitpunkts unterstützt die Entscheidung, ob und wann menschliche Geburtshilfe angebracht ist.</li>
-                                <li>Hier setzt das Projekt an! </li>
-                                <li>Optimales Management und Überwachung der Geburt verringert die Risiken der Geburt.</li>
+
+                                <li>Optimales Management und Überwachung verringert die Risiken der Geburt.</li>
                     
                                 
                             </ul>
@@ -124,8 +129,8 @@
                         <aside class="notes">
                             <ul>
                                 <li>Aufwand für die Überwachung des Geburtsverlaufs reduzieren</li>
+                                <li>Geburtsrisiken senken</li>                                
                                 <li>Entscheidungsunterstützung und Vereinfachung der Einleitung von Massnahmen zur Geburtshilfe.</li>
-                                <li>Geburtsrisiken senken</li>
                                 <li>System entwickeln, welches die automatische Analyse von Kamerabildern zur Prognose des Geburtszeitpunkts von Kälbern ermöglicht</li>
                                 <li>Das System arbeitet auf Basis von geometrischen Mustern und visuellen Merkmalen.</li>
                                 <li>Das System arbeitet aus sicherer Entfernung zu den Tieren, sodass es nicht invasiv ist.</li>
@@ -154,11 +159,11 @@
                         <ul>
                             <li>Tabelle ist integraler Bestandteil des zu entwickeltnden System.</li>
                             <li> Umsetzung der Merkmale (Kuh liegend usw.) in Daten, die man algorithmisch auswerten kann</li>
-                            <li>Tabelle codiert Domänenwissen für die Identfizierung von Geburtsmerkmalen</li>
                             <li>Experten haben bewertet, wie stark die Anwesenheit oder Abwesenheit eines Merkmals einen Hinweis für eine Geburt liefert. </li>
                             <li>  Die Spaltengruppen „Anwesenheit“ und „Abwesenheit“ = Rohdaten, welche auf Interviews basieren. Die Spalten der Gruppe „Mittelwert“ entsprechen jeweils dem gewichteten Mittelwert der Rohdaten aus den vorgelagerten Spaltengruppen.</li>
                             <li> Eine Spalte jeweils die Gewichtung und eine die Bewertung des Hinweises</li>
                             <li>nicht alle Experten dieselben Merkmale --> wenn ein Merkmal nicht bewertet wurde: Gewichtung = 0 und Bewertung =99</li>
+                            <li>PAUSE</li>
                             <li>Ergebnis: Seitenlage und Anwesnheit der Fruchtblasen sind die wichtigsten Geburtsmerkmale--> System muss diese erkennen. </li>
                         </ul>
                         ################################################# <br>      
@@ -195,7 +200,7 @@
                         UNBEDINGT DARSTELLUNG MIT ZOOM FUNKTION ALT+KLICK <br> <br>
                         
                         Ich gehe auf eine Auswahl von Klassen ein, welche fachlich interessant sind.  <br> <br>
-                        Die Klasse "ImageProcessor" verarbeitet Bilder unter Verwendung der OpenCV Bibliothek. Dabei werden Bilder oft als Matrizen behandelt, zb durch die Multiplikation mit einem Skalar aufgehellt. Weiter kann der ImageProcessor Schwellwertverfahren mittels der Funktion threshold() oder adaptiveThreshold() durchführen oder das Histogramm eines Bildesmittels clahe() glätten. <br> <br>
+                        Die Klasse "ImageProcessor" verarbeitet Bilder unter Verwendung der OpenCV Bibliothek. Dabei werden Bilder werden  als Matrizen eingelesen, zb und aufgehellt durch Multiplikation mit einem Skalar. Weiter kann der ImageProcessor Schwellwertverfahren mittels der Funktion threshold() oder adaptiveThreshold() durchführen oder das Histogramm eines Bildesmittels clahe() glätten. <br> <br>
                         
                         Die Klasse "ContourFinder" nimmt eine Konfiguration entgegen und sucht abhängig von der Konfiguration Kontouren in einem Bild. Dabei wird die Funktion findContours() verwendet.   <br> <br>   
                         
@@ -363,15 +368,17 @@
                     <aside class="notes">
    
                         
-                        <li>boundingRect() bildet Rechtecke, welche die Konturen umschliessen</li>
                         <li> Messung der Winkel der Konturen</li>
                         <li>Wissen: Lampe ist waagrecht im Raum</li>
                         <li> Dann werden die Winkel der Konturen um den Winkel der Lampe bereinigt. Das Vorgehen gleicht grundsätzlich dem Prinzip, das Bild solange zu drehen, bis die Lampe waagrecht im Bild ist und erst dann die Winkel zu messen.</li>
                         <li>Nun werden Winkel zwischen 70 und 110 Grad berücksichtigt, da Beine bei der Seitenlage ca 90 Grad haben </li>
+                        <li>Wertvoll: Merkmal von Bauchlage der Kuh rechts wird gefiltert</li>
                         <br>
                         
                         ###################################### <br>
-                         <li>Für die Messung der Winkel wurde die Funktion fitEllipse() verwendet, welche den Winkel der entsprechenden Ellipse zurückgibt</li>
+                        <li>boundingRect() bildet Rechtecke, welche die Konturen umschliessen</li>
+
+                        <li>Für die Messung der Winkel wurde die Funktion fitEllipse() verwendet, welche den Winkel der entsprechenden Ellipse zurückgibt</li>
                         <li> Dann werden die Winkel der Konturen um den Winkel der Lampe bereinigt. Das Vorgehen gleicht grundsätzlich dem Prinzip, das Bild solange zu drehen, bis die Lampe waagrecht im Bild ist und erst dann die Winkel zu messen.</li>
                         </aside>                
 
@@ -464,10 +471,16 @@
                 
                 <section  class="traitRecognitor"  data-transition="slide" data-background="#33a02c" data-background-transition="zoom">
                    <aside class="notes">
-                        <p>Aspect Ratio= Lange Seite/ kurze Seite</p>
-                       
-                       <p>Annahme: Rechtecke, welche die Beine der Kuh einschliessen, sind langgezogen.</p> 
-                       <p>Langgezogen: Verhältnis zwischen Breite und Höhe von Rechtecken (nachfolgend Aspect Ratio genannt) liefert Informationen darüber, wie langgezogen ein Rechteck ist. --> respektive das Verhältnis zwischen der langen und der kurzen Seite</p>    
+                       <ul>
+                            <li>Aspect Ratio= Verhältnis zwischen Langer Seite und kurzer Seite</li>
+
+                           <li> wie langgezogen ist ein Rechteck?</li> 
+                          <li>Annahme: Rechtecke, welche die Beine der Kuh einschliessen, sind langgezogen.</li> 
+                           <li>Ergebnis: Quadrate und Rechtecke mit fast gleich langen Seiten können gefiltert werden.</li>
+                           <li>Hier kurz Resultat besprechen.</li>
+                           <li>Wertvoll: Merkmal von Bauchlage der Kuh rechts wird gefiltert </li>
+                       </ul>
+
                     </aside>
                     
                     <div class="containsTT">
